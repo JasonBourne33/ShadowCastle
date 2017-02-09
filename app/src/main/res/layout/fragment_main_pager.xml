@@ -1,0 +1,100 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fragment.MainPagerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/include_titlebar"/>
+
+        <TextView
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to my castle" />
+
+        <TextView
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MainPager Fragment" />
+
+        <Button
+            android:id="@+id/btn_MultiStatus"
+            android:textAllCaps="false"
+            android:text="MultiPleStatus+FloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/btn_GesturePwd"
+            android:text="GesturePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        <Button
+            android:id="@+id/btn_Volley"
+            android:text="Volley Login"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_advertising"
+            android:text="Advertising"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        <Button
+            android:id="@+id/btn_banner"
+            android:text="Banner"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_recycler"
+                android:text="RecyclerView"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+            <Button
+                android:id="@+id/btn_pullRecycler"
+                android:text="PullToRefreshRecycler"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_persistentData"
+            android:text="PersistentData"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/btn_Material"
+            android:text="MaterialDesign"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</FrameLayout>

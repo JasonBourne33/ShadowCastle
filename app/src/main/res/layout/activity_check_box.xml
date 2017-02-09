@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_check_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/cb_milk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="牛奶"
+        />
+    <CheckBox
+        android:id="@+id/cb_apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蘋果"
+        />
+    <CheckBox
+        android:id="@+id/cb_chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新奧爾良烤咕"
+        />
+    <CheckBox
+        android:id="@+id/cb_frenchFries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="薯條"
+        />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_note" />
+
+    <Button
+        android:id="@+id/btn_enter"
+        android:text="Commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+
+</LinearLayout>

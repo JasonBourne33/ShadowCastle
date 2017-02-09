@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/theme_blue"
+    android:weightSum="1">
+
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/top_back"
+        android:scaleType="center"
+        android:background="@drawable/selector_transport"
+        android:layout_alignBottom="@+id/title_tv"
+        android:padding="3dp"/>
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Title"
+        android:ellipsize="end"
+        android:textColor="@color/font_white"
+        android:textSize="@dimen/text_size_large"
+        android:layout_weight="1.21" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/title_tv"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical|right">
+        <Button
+            android:id="@+id/topbar_skip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/share_ic"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/topbar_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            style="@style/txt_white_middle"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+</LinearLayout>
