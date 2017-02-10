@@ -16,9 +16,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.chaos.adapter.FruitAdapter;
+import com.chaos.adapter.MaterialRecyclerViewAdapter;
 import com.chaos.adapter.PullRecyclerViewAdapter;
 import com.chaos.bean.Fruit;
 import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
@@ -42,7 +44,7 @@ public class MaterialActivity extends AppCompatActivity{
     RecyclerView recyclerView;
     @Bind(R.id.swipe_refresh)
     SwipeRefreshLayout swipeRefresh;
-    private FruitAdapter adapter;
+    private MaterialRecyclerViewAdapter adapter;
     private List<Fruit> fruitList = new ArrayList<>();
 
     private Fruit[] fruits = {new Fruit("Apple", R.drawable.apple), new Fruit("Banana", R.drawable.banana),
@@ -57,7 +59,7 @@ public class MaterialActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material);
         ButterKnife.bind(this);
-
+//        this.requestWindowFeature(Window.FEATURE_ACTION_BAR);
         initFruits();
         getData();
         setSupportActionBar(toolbar);
@@ -84,7 +86,7 @@ public class MaterialActivity extends AppCompatActivity{
 
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new FruitAdapter(fruitList);
+        adapter = new MaterialRecyclerViewAdapter(fruitList);
         recyclerView.setAdapter(adapter);
 
 
