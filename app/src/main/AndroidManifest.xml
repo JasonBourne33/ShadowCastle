@@ -49,9 +49,11 @@
         <activity android:name=".PersistentActivity" />
         <activity android:name=".LiteProActivity" />
         <activity android:name=".LeakCanaryActivity" />
-        <activity android:name=".MaterialActivity"
-            android:label="Material Fire"></activity>
-        <activity android:name=".FruitActivity"></activity>
+        <activity
+            android:name=".MaterialActivity"
+            android:label="Material Fire" />
+        <activity android:name=".FruitActivity" />
+        <activity android:name=".MenuActivity"></activity>
     </application>
 
 </manifest>

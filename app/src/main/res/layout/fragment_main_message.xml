@@ -23,6 +23,12 @@
             android:layout_height="wrap_content"
             android:text="LeakCanary"
             android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.chaos.util.TitleBuilder;
 import com.chaos.util.ToastUtils;
 import com.example.administrator.multiplestatusviewtest.LeakCanaryActivity;
+import com.example.administrator.multiplestatusviewtest.MenuActivity;
 import com.example.administrator.multiplestatusviewtest.R;
 
 /**
@@ -37,7 +38,9 @@ public class MainFoundFragment extends BaseFragment implements View.OnClickListe
         View view = inflater.inflate(R.layout.fragment_main_message, container, false);
 
         Button btnLeakCanary = (Button) view.findViewById(R.id.btn_leakCanary);
+        Button btnMenu = (Button) view.findViewById(R.id.btn_Menu);
         btnLeakCanary.setOnClickListener(this);
+        btnMenu.setOnClickListener(this);
 
         new TitleBuilder(view)
                 .setTitleText("HomePage")
@@ -53,9 +56,14 @@ public class MainFoundFragment extends BaseFragment implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
             case R.id.btn_leakCanary:
-                Intent intent = new Intent(mContext, LeakCanaryActivity.class);
+                intent = new Intent(mContext, LeakCanaryActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_Menu:
+                intent = new Intent(mContext, MenuActivity.class);
                 startActivity(intent);
                 break;
         }

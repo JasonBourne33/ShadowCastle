@@ -9,8 +9,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <item name="windowActionBar">false</item> <!--设置无状态栏-->
-        <item name="windowNoTitle">true</item>
+        <!--<item name="windowActionBar">false</item> &lt;!&ndash;设置无状态栏&ndash;&gt;
+        <item name="windowNoTitle">true</item>-->
     </style>
 
 
