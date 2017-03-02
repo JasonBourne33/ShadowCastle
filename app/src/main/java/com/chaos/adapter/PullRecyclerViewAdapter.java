@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chaos.bean.Fruit;
 import com.example.administrator.multiplestatusviewtest.R;
@@ -22,9 +23,9 @@ public class PullRecyclerViewAdapter extends RecyclerView.Adapter<PullRecyclerVi
 
     private Context mContext;
     private List<Fruit> dataList = new ArrayList<>();
-    private ImageView imgFruit;
-    private TextView tvName;
-
+    private int selectedPos;
+    private Fruit fruit;
+    int position;
 
     public void addAllData(List<Fruit> dataList) {
         this.dataList.addAll(dataList);
@@ -41,8 +42,12 @@ public class PullRecyclerViewAdapter extends RecyclerView.Adapter<PullRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        View fruitView;
+        ImageView imgFruit;
+        TextView tvName;
         public ViewHolder(View view) {
             super(view);
+                fruitView = view;
                 imgFruit = (ImageView) view.findViewById(R.id.fruit_image);
                 tvName = (TextView) view.findViewById(R.id.fruit_name);
         }
@@ -51,14 +56,30 @@ public class PullRecyclerViewAdapter extends RecyclerView.Adapter<PullRecyclerVi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item, parent, false);
-        return new ViewHolder(v);
+        final ViewHolder holder = new ViewHolder(v);
+        holder.fruitView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                selectedPos = position;
+                Toast.makeText(mContext,"position=== "+position,Toast.LENGTH_SHORT).show();
+//                if(position == selectedPos){
+//                    holder.tvName.setText("selected");
+//                }
+//                holder.tvName.setText(" fruit 6666666666666 pasition=== "+position);
+
+            }
+        });
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        Fruit fruit = dataList.get(position);
-        tvName.setText(fruit.getName());
-        imgFruit.setImageResource(fruit.getImageId());
+        this.position = position;
+
+        fruit = dataList.get(position);
+        holder.tvName.setText(fruit.getName());
+        holder.imgFruit.setImageResource(fruit.getImageId());
     }
 
     @Override

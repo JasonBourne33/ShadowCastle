@@ -29,6 +29,24 @@
             android:layout_height="wrap_content"
             android:text="Menu"
             android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_downLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DownLoad"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_AlarmService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AlarmService"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_QRCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QRCode"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

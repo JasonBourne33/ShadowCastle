@@ -1,12 +1,18 @@
 package com.chaos.adapter;
 
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.chaos.bean.Fruit;
+import com.example.administrator.multiplestatusviewtest.FruitActivity;
 import com.example.administrator.multiplestatusviewtest.R;
 
 import java.util.List;
@@ -15,45 +21,62 @@ import java.util.List;
  * Created by Administrator on 2017/2/10.
  */
 
-public class MaterialRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+public class MaterialRecyclerViewAdapter extends RecyclerView.Adapter<MaterialRecyclerViewAdapter.ViewHolder>{
 
-    // 数据集
-    private List<Fruit> mFruit;
+    private static final String TAG = "FruitAdapter";
 
-    public MaterialRecyclerViewAdapter(List<Fruit> fruit) {
-        super();
-        this.mFruit = fruit;
-    }
+    private Context mContext;
 
-    @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        // 创建一个View，简单起见直接使用系统提供的布局，就是一个TextView
-        View view = View.inflate(viewGroup.getContext(), R.layout.item_material_fruit, null);
-        // 创建一个ViewHolder
-        RecyclerViewAdapter.ViewHolder holder = new RecyclerViewAdapter.ViewHolder(view);
-        return holder;
-    }
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    private List<Fruit> mFruitList;
 
-        public TextView tvName;
-        public ImageView imgFruit;
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        CardView cardView;
+        ImageView fruitImage;
+        TextView fruitName;
 
         public ViewHolder(View view) {
             super(view);
-            tvName = (TextView) view.findViewById(R.id.tv_fruitName);
-            imgFruit = (ImageView) view.findViewById(R.id.img_fruit);
+            cardView = (CardView) view;
+            fruitImage = (ImageView) view.findViewById(R.id.img_fruit);
+            fruitName = (TextView) view.findViewById(R.id.tv_fruitName);
         }
     }
 
+    public MaterialRecyclerViewAdapter(List<Fruit> fruitList) {
+        mFruitList = fruitList;
+    }
+
     @Override
-    public void onBindViewHolder(RecyclerViewAdapter.ViewHolder viewHolder, int i) {
-        // 绑定数据到ViewHolder上
-        viewHolder.tvName.setText(mFruit.get(i).getName());
-        viewHolder.imgFruit.setImageResource(mFruit.get(i).getImageId());
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (mContext == null) {
+            mContext = parent.getContext();
+        }
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_material_fruit, parent, false);
+        final ViewHolder holder = new ViewHolder(view);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                Fruit fruit = mFruitList.get(position);
+                Intent intent = new Intent(mContext, FruitActivity.class);
+                intent.putExtra(FruitActivity.FRUIT_NAME, fruit.getName());
+                intent.putExtra(FruitActivity.FRUIT_IMAGE_ID, fruit.getImageId());
+                mContext.startActivity(intent);
+            }
+        });
+        return holder;
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Fruit fruit = mFruitList.get(position);
+        holder.fruitName.setText(fruit.getName());
+        Glide.with(mContext).load(fruit.getImageId()).into(holder.fruitImage);
     }
 
     @Override
     public int getItemCount() {
-        return mFruit.size();
+        return mFruitList.size();
     }
+
 }

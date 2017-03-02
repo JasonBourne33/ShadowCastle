@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <!--<item name="android:windowNoTitle">true</item> &lt;!&ndash; 设置无标题 &ndash;&gt;
         <item name="android:windowFullscreen">true</item>-->
@@ -9,12 +9,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!--<item name="windowActionBar">false</item> &lt;!&ndash;设置无状态栏&ndash;&gt;
-        <item name="windowNoTitle">true</item>-->
+        <item name="windowActionBar">false</item> <!--设置无状态栏-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FruitActivityTheme" parent="AppTheme">
     </style>
 
 
-    <style name="MultipleStatusView"/>
+    <style name="MultipleStatusView" />
+
     <style name="MultipleStatusView.Content">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -28,12 +32,14 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="FabMenu.Buttons">
         <item name="fab_size">mini</item>
         <item name="fab_colorNormal">#FF4081</item>
         <item name="fab_colorPressed">#E91E63</item>
         <item name="fab_colorRipple">#C2185B</item>
     </style>
+
     <style name="txt_white_middle">
         <item name="android:textSize">@dimen/text_size_middle</item>
         <item name="android:textColor">@color/font_white</item>
@@ -140,7 +146,6 @@
         <item name="android:listSelector">@color/transparent</item>
         <item name="android:scrollbars">none</item>
     </style>
-
 
 
 </resources>

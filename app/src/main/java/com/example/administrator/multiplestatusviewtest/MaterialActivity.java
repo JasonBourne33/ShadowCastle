@@ -34,8 +34,8 @@ import butterknife.ButterKnife;
 
 public class MaterialActivity extends AppCompatActivity{
 
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+//    @Bind(R.id.toolbar)
+//    Toolbar toolbar;
     @Bind(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
     @Bind(R.id.nav_view)
@@ -59,10 +59,10 @@ public class MaterialActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material);
         ButterKnife.bind(this);
-//        this.requestWindowFeature(Window.FEATURE_ACTION_BAR);
         initFruits();
         getData();
-        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar); //在设置有标题栏的时候把这行注释掉，否则崩溃
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);

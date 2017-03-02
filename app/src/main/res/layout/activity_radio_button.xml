@@ -20,7 +20,7 @@
         android:id="@+id/rg_sex"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
         <RadioButton
             android:id="@+id/rb_sex_male"
