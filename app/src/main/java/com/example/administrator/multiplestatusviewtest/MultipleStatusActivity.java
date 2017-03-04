@@ -1,12 +1,14 @@
 package com.example.administrator.multiplestatusviewtest;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.classic.common.MultipleStatusView;
-import com.example.administrator.multiplestatusviewtest.R;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 
@@ -44,12 +46,28 @@ public class MultipleStatusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiple_status);
         ButterKnife.bind(MultipleStatusActivity.this);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar); //在设置有标题栏的时候把这行注释掉，否则崩溃
         mMultipleStatusView = (MultipleStatusView) findViewById(R.id.main_multiplestatusview);
         mFloatingActionMenu = (FloatingActionMenu) findViewById(R.id.main_fab_menu);
 
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.top_back);
+        }
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @OnClick({R.id.main_fab_loading, R.id.main_fab_empty, R.id.main_fab_error, R.id.main_fab_no_network, R.id.main_fab_content})
     void OnClick(View v) {

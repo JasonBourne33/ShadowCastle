@@ -2,17 +2,18 @@ package com.example.administrator.multiplestatusviewtest;
 
 
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.administrator.multiplestatusviewtest.R;
 import com.example.fragment.FragmentController;
 import com.example.fragment.MainFoundFragment;
 import com.example.fragment.MainMessageFragment;
@@ -31,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
     ImageView ivAdd;
     @Bind(R.id.mainpager_framelay)
     FrameLayout mainpagerFramelay;
+    @Bind(R.id.nav_view)
+    NavigationView navView;
     @Bind(R.id.activity_main)
-    LinearLayout activityMain;
+    DrawerLayout activityMain;
 
     private FragmentManager fragmentManager;
     private Fragment mainpagerFragment, mainmessageFragment, mainpersonalFragment, maincolletFragment;//mainVipFragment,
@@ -62,9 +65,39 @@ public class MainActivity extends AppCompatActivity {
 //        fragmentManager = getFragmentManager();
 //        setFragment();
 
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                System.out.println("item=== "+item.getItemId());
+                switch (item.getItemId()){
+                    case R.id.nav_call:
+                        Toast.makeText(MainActivity.this,"call",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_friends:
+                        Toast.makeText(MainActivity.this,"friends",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_location:
+                        Toast.makeText(MainActivity.this,"location",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_mail:
+                        Toast.makeText(MainActivity.this,"mail",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_task:
+                        Toast.makeText(MainActivity.this,"task",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_view:
+                        Toast.makeText(MainActivity.this,"view",Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                activityMain.closeDrawers();
+                return true;
+            }
+        });
+
     }
 
-    @OnClick({R.id.main_pager_layout, R.id.main_collect_layout, R.id.main_message_layout, R.id.main_personal_layout,R.id.iv_add})
+
+    @OnClick({R.id.main_pager_layout, R.id.main_collect_layout, R.id.main_message_layout, R.id.main_personal_layout, R.id.iv_add})
     void OnClick(View v) {
         switch (v.getId()) {
             case R.id.main_pager_layout:
@@ -80,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 controller.showFragment(3);
                 break;
             case R.id.iv_add:
-                Toast.makeText(this, "add Listener",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "add Listener", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

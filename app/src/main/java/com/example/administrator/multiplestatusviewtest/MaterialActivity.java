@@ -13,17 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.Toast;
 
-import com.chaos.adapter.FruitAdapter;
 import com.chaos.adapter.MaterialRecyclerViewAdapter;
-import com.chaos.adapter.PullRecyclerViewAdapter;
 import com.chaos.bean.Fruit;
-import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -131,6 +127,12 @@ public class MaterialActivity extends AppCompatActivity{
 
     }
 
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar, menu);
+        return true;
+    }
+
     private void initFruits() {
         fruitList.clear();
         for (int i = 0; i < 50; i++) {
@@ -156,6 +158,16 @@ public class MaterialActivity extends AppCompatActivity{
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 break;
+            case R.id.backup:
+                Toast.makeText(this, "You clicked Backup", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.delete:
+                Toast.makeText(this, "You clicked Delete", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.settings:
+                Toast.makeText(this, "You clicked Settings", Toast.LENGTH_SHORT).show();
+                break;
+            default:
         }
         return true;
     }

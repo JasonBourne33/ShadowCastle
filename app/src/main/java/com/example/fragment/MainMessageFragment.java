@@ -7,16 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.chaos.util.TitleBuilder;
 import com.chaos.util.ToastUtils;
 import com.example.administrator.multiplestatusviewtest.CheckBoxActivity;
-import com.example.administrator.multiplestatusviewtest.RadioButtonActivity;
 import com.example.administrator.multiplestatusviewtest.R;
-
-import butterknife.ButterKnife;
+import com.example.administrator.multiplestatusviewtest.RadioButtonActivity;
+import com.example.administrator.multiplestatusviewtest.StartActivityForResultActivity;
 
 /**
  * Created by Administrator on 2016/12/30.
@@ -49,8 +47,10 @@ public class MainMessageFragment extends BaseFragment implements View.OnClickLis
 
         Button btnRb = (Button) view.findViewById(R.id.btn_radioButton);
         Button btnCb = (Button) view.findViewById(R.id.btn_checkBox);
+        Button btnForResult = (Button) view.findViewById(R.id.btn_forResult);
         btnRb.setOnClickListener(this);
         btnCb.setOnClickListener(this);
+        btnForResult.setOnClickListener(this);
         return view;
 
 
@@ -65,8 +65,11 @@ public class MainMessageFragment extends BaseFragment implements View.OnClickLis
                 startActivity(intent);
                 break;
             case R.id.btn_checkBox:
-                System.out.println("checkeBox===== ");
                 intent = new Intent(mContext,CheckBoxActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_forResult:
+                intent = new Intent(mContext, StartActivityForResultActivity.class);
                 startActivity(intent);
                 break;
         }
