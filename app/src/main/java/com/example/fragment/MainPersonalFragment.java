@@ -22,6 +22,13 @@ public class MainPersonalFragment extends BaseFragment {
         // Required empty public constructor
     }
 
+    public static MainPersonalFragment newInstance(String content) {
+        Bundle args = new Bundle();
+        args.putString("ARGS", content);
+        MainPersonalFragment fragment = new MainPersonalFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.chaos.adapter.PullRecyclerViewAdapter;
 import com.chaos.util.TitleBuilder;
 import com.example.administrator.multiplestatusviewtest.AdvertisingActivity;
 import com.example.administrator.multiplestatusviewtest.BannerActivity;
@@ -18,9 +17,9 @@ import com.example.administrator.multiplestatusviewtest.MaterialActivity;
 import com.example.administrator.multiplestatusviewtest.MultipleStatusActivity;
 import com.example.administrator.multiplestatusviewtest.PersistentActivity;
 import com.example.administrator.multiplestatusviewtest.PullLoadMoreRecyclerActivity;
+import com.example.administrator.multiplestatusviewtest.R;
 import com.example.administrator.multiplestatusviewtest.RecyclerViewActivity;
 import com.example.administrator.multiplestatusviewtest.VolleyActivity;
-import com.example.administrator.multiplestatusviewtest.R;
 
 import butterknife.ButterKnife;
 
@@ -31,6 +30,14 @@ public class MainPagerFragment extends BaseFragment implements View.OnClickListe
     private Context mContext;
     public MainPagerFragment() {
         // Required empty public constructor
+    }
+
+    public static MainPagerFragment newInstance(String content) {
+        Bundle args = new Bundle();
+        args.putString("ARGS", content);
+        MainPagerFragment fragment = new MainPagerFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 

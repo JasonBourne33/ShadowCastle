@@ -35,5 +35,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="startActivityForResult"/>
+        <Button
+            android:id="@+id/btn_bottomNavigation"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BottomNavigation"/>
     </LinearLayout>
 </FrameLayout>

@@ -155,4 +155,9 @@
     <color name="button_gray">#cdcdcd</color>
     <color name="button_orange">#ff9e05</color>
     <color name="button_red">#ff2b23</color>
+
+
+    <color name="teal">#00796B</color>
+    <color name="brown">#8D6E63</color>
+    <color name="grey">#607D8B</color>
 </resources>

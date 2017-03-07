@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.chaos.util.TitleBuilder;
 import com.chaos.util.ToastUtils;
+import com.example.administrator.multiplestatusviewtest.BottomNavigationActivity;
 import com.example.administrator.multiplestatusviewtest.CheckBoxActivity;
 import com.example.administrator.multiplestatusviewtest.R;
 import com.example.administrator.multiplestatusviewtest.RadioButtonActivity;
@@ -28,7 +29,13 @@ public class MainMessageFragment extends BaseFragment implements View.OnClickLis
         // Required empty public constructor
     }
 
-
+    public static MainMessageFragment newInstance(String content) {
+        Bundle args = new Bundle();
+        args.putString("ARGS", content);
+        MainMessageFragment fragment = new MainMessageFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,9 +55,11 @@ public class MainMessageFragment extends BaseFragment implements View.OnClickLis
         Button btnRb = (Button) view.findViewById(R.id.btn_radioButton);
         Button btnCb = (Button) view.findViewById(R.id.btn_checkBox);
         Button btnForResult = (Button) view.findViewById(R.id.btn_forResult);
+        Button btnBottomNavigation = (Button) view.findViewById(R.id.btn_bottomNavigation);
         btnRb.setOnClickListener(this);
         btnCb.setOnClickListener(this);
         btnForResult.setOnClickListener(this);
+        btnBottomNavigation.setOnClickListener(this);
         return view;
 
 
@@ -70,6 +79,10 @@ public class MainMessageFragment extends BaseFragment implements View.OnClickLis
                 break;
             case R.id.btn_forResult:
                 intent = new Intent(mContext, StartActivityForResultActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_bottomNavigation:
+                intent = new Intent(mContext, BottomNavigationActivity.class);
                 startActivity(intent);
                 break;
         }

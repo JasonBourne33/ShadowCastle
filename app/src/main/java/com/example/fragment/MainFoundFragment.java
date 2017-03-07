@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.chaos.service.AlarmService;
 import com.chaos.util.TitleBuilder;
 import com.chaos.util.ToastUtils;
 import com.example.administrator.multiplestatusviewtest.AlarmServiceActivity;
@@ -31,6 +30,13 @@ public class MainFoundFragment extends BaseFragment implements View.OnClickListe
         // Required empty public constructor
     }
 
+    public static MainFoundFragment newInstance(String content) {
+        Bundle args = new Bundle();
+        args.putString("ARGS", content);
+        MainFoundFragment fragment = new MainFoundFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

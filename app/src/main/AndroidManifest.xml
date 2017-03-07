@@ -35,8 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MultipleStatusActivity"
-                    android:label="DoomHammer"/>
+        <activity
+            android:name=".MultipleStatusActivity"
+            android:label="DoomHammer" />
         <activity android:name=".GesturePwdActivity" />
         <activity android:name=".GestureSetPwdActivity" />
         <activity android:name=".GestureConfirmPwdActivity" />
@@ -52,7 +53,7 @@
         <activity android:name=".PersistentActivity" />
         <activity android:name=".LiteProActivity" />
         <activity android:name=".LeakCanaryActivity" />
-        <activity android:name=".MaterialActivity"/>
+        <activity android:name=".MaterialActivity" />
         <activity
             android:name=".FruitActivity"
             android:theme="@style/FruitActivityTheme" />
@@ -66,7 +67,8 @@
         <activity android:name=".AlarmServiceActivity" />
         <activity android:name=".QRCodeActivity" />
         <activity android:name=".StartActivityForResultActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".BottomNavigationActivity"></activity>
     </application>
 
 </manifest>
