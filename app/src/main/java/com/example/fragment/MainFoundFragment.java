@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.chaos.util.TitleBuilder;
 import com.chaos.util.ToastUtils;
 import com.example.administrator.multiplestatusviewtest.AlarmServiceActivity;
+import com.example.administrator.multiplestatusviewtest.EventBusActivity;
 import com.example.administrator.multiplestatusviewtest.LeakCanaryActivity;
 import com.example.administrator.multiplestatusviewtest.MenuActivity;
 import com.example.administrator.multiplestatusviewtest.R;
@@ -49,10 +50,12 @@ public class MainFoundFragment extends BaseFragment implements View.OnClickListe
         Button btnMenu = (Button) view.findViewById(R.id.btn_Menu);
         Button btnAlarmService = (Button) view.findViewById(R.id.btn_AlarmService);
         Button btnQRCode = (Button) view.findViewById(R.id.btn_QRCode);
+        Button btnEventBus = (Button) view.findViewById(R.id.btn_eventBus);
         btnLeakCanary.setOnClickListener(this);
         btnMenu.setOnClickListener(this);
         btnAlarmService.setOnClickListener(this);
         btnQRCode.setOnClickListener(this);
+        btnEventBus.setOnClickListener(this);
 
         new TitleBuilder(view)
                 .setTitleText("HomePage")
@@ -84,6 +87,10 @@ public class MainFoundFragment extends BaseFragment implements View.OnClickListe
                 break;
             case R.id.btn_QRCode:
                 intent = new Intent(mContext, AlarmServiceActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eventBus:
+                intent = new Intent(mContext, EventBusActivity.class);
                 startActivity(intent);
                 break;
         }
