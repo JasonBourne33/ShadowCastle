@@ -32,10 +32,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/NoActionAppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".MaterialMainActivity">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MaterialMainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -76,11 +76,12 @@
         <activity android:name=".StartActivityForResultActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".BottomNavigationActivity" />
-        <activity android:name=".CompressorActivity">
-
-        </activity>
+        <activity android:name=".CompressorActivity" />
         <activity android:name=".EventBusActivity" />
-        <activity android:name=".EventBusSecondActivity"></activity>
+        <activity android:name=".EventBusSecondActivity" />
+        <activity android:name=".OkHttpActivity" />
+        <activity android:name=".GlideActivity" />
+        <activity android:name=".PictureSelectorActivity"></activity>
     </application>
 
 </manifest>

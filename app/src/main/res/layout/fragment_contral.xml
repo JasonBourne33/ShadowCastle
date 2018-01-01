@@ -41,6 +41,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BottomNavigation"/>
+        <Button
+            android:id="@+id/btn_pictureSelector"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PictureSelector"/>
     </LinearLayout>
 
 </FrameLayout>

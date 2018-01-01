@@ -41,7 +41,7 @@ public class AdvertisingActivity extends AppCompatActivity {
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 145));
             String imgUrl = "http://214.214.1.157:65500/AD/"+(i+5)+".jpg";
-            imageLoader.displayImage(imgUrl, imageView);
+            imageLoader.displayImage(imgUrl,imageView);
             imageViewsList.add(imageView);
             names.add("");
         }

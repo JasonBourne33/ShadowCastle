@@ -14,6 +14,7 @@ import com.example.administrator.multiplestatusviewtest.BannerActivity;
 import com.example.administrator.multiplestatusviewtest.GesturePwdActivity;
 import com.example.administrator.multiplestatusviewtest.MaterialActivity;
 import com.example.administrator.multiplestatusviewtest.MultipleStatusActivity;
+import com.example.administrator.multiplestatusviewtest.OkHttpActivity;
 import com.example.administrator.multiplestatusviewtest.PersistentActivity;
 import com.example.administrator.multiplestatusviewtest.PullLoadMoreRecyclerActivity;
 import com.example.administrator.multiplestatusviewtest.R;
@@ -34,7 +35,10 @@ public class TrickFragment extends Fragment {
         return view;
     }
 
-    @OnClick({R.id.btn_MultiStatus, R.id.btn_GesturePwd, R.id.btn_Volley, R.id.btn_advertising, R.id.btn_banner, R.id.btn_recycler, R.id.btn_pullRecycler, R.id.btn_persistentData, R.id.btn_Material})
+    @OnClick({R.id.btn_MultiStatus, R.id.btn_GesturePwd, R.id.btn_Volley,
+            R.id.btn_advertising, R.id.btn_banner, R.id.btn_recycler,
+            R.id.btn_pullRecycler, R.id.btn_persistentData, R.id.btn_Material,
+            R.id.btn_OkHttp})
     void OnClick(View v) {
         Intent intent;
         switch (v.getId()) {
@@ -72,6 +76,10 @@ public class TrickFragment extends Fragment {
                 break;
             case R.id.btn_Material:
                 intent = new Intent(mContext, MaterialActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_OkHttp:
+                intent = new Intent(mContext, OkHttpActivity.class);
                 startActivity(intent);
                 break;
         }

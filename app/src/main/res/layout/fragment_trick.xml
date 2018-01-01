@@ -8,91 +8,104 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <include layout="@layout/include_titlebar"/>
+
+        <include layout="@layout/include_titlebar" />
 
         <TextView
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to my castle" />
+            android:text="Welcome to my castle"
+            android:textAllCaps="false" />
 
         <TextView
-            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MainPager Fragment" />
+            android:text="MainPager Fragment"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_MultiStatus"
-            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="MultiPleStatus+FloatingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:textAllCaps="false" />
+
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_GesturePwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="GesturePassword"
-            android:layout_width="wrap_content"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-        <Button
-            android:id="@+id/btn_Volley"
-            android:text="Volley Login"
-            android:textAllCaps="false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Volley"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volley Login"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn_OkHttp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OkHttp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn_advertising"
-                android:text="Advertising"
-                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="Advertising"
+                android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_banner"
-                android:text="Banner"
-                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="Banner"
+                android:textAllCaps="false" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn_recycler"
-                android:text="RecyclerView"
-                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="RecyclerView"
+                android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_pullRecycler"
-                android:text="PullToRefreshRecycler"
-                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="PullToRefreshRecycler"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_persistentData"
-            android:text="PersistentData"
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:text="PersistentData"
+            android:textAllCaps="false" />
+
         <Button
             android:id="@+id/btn_Material"
-            android:text="MaterialDesign"
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:text="MaterialDesign"
+            android:textAllCaps="false" />
     </LinearLayout>
 </FrameLayout>

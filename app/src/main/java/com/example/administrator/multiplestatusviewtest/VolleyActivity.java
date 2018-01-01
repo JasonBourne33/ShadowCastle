@@ -67,7 +67,7 @@ public class VolleyActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(VolleyActivity.this, MainActivity.class);
                 startActivity(intent);
-
+                System.out.println("Login success");
 //                System.out.println("device_token=== " + device_token);
             }
         }, new Response.ErrorListener() {

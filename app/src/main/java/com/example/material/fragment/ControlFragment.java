@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.administrator.multiplestatusviewtest.BottomNavigationActivity;
 import com.example.administrator.multiplestatusviewtest.CheckBoxActivity;
+import com.example.administrator.multiplestatusviewtest.PictureSelectorActivity;
 import com.example.administrator.multiplestatusviewtest.R;
 import com.example.administrator.multiplestatusviewtest.RadioButtonActivity;
 import com.example.administrator.multiplestatusviewtest.StartActivityForResultActivity;
@@ -32,7 +33,8 @@ public class ControlFragment extends Fragment {
         return view;
     }
 
-    @OnClick({R.id.btn_radioButton,R.id.btn_checkBox,R.id.btn_forResult,R.id.btn_bottomNavigation})
+    @OnClick({R.id.btn_radioButton,R.id.btn_checkBox,R.id.btn_forResult,R.id.btn_bottomNavigation,
+            R.id.btn_pictureSelector})
     void OnClick(View v){
         Intent intent;
         switch (v.getId()){
@@ -50,6 +52,10 @@ public class ControlFragment extends Fragment {
                 break;
             case R.id.btn_bottomNavigation:
                 intent = new Intent(mContext, BottomNavigationActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_pictureSelector:
+                intent = new Intent(mContext, PictureSelectorActivity.class);
                 startActivity(intent);
                 break;
         }
