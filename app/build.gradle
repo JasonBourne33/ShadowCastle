@@ -21,6 +21,9 @@ android {
             buildConfigField("int", "netConfig", "1");
         }
     }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
 }
 
 
@@ -54,6 +57,7 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.android.support.constraint:constraint-layout:+'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.7'
     testCompile 'junit:junit:4.12'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'

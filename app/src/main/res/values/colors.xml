@@ -160,4 +160,12 @@
     <color name="teal">#00796B</color>
     <color name="brown">#8D6E63</color>
     <color name="grey">#607D8B</color>
+
+    <!--picture selector-->
+    <color name="bar_grey">#393a3e</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="color_fa">#fafafa</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="color_c51">#f94c51</color>
+    <color name="color_green">#43c117</color>
 </resources>
