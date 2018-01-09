@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 
 import com.example.administrator.multiplestatusviewtest.AlarmServiceActivity;
 import com.example.administrator.multiplestatusviewtest.EventBusActivity;
+import com.example.administrator.multiplestatusviewtest.GetLatLngActivity;
 import com.example.administrator.multiplestatusviewtest.LeakCanaryActivity;
 import com.example.administrator.multiplestatusviewtest.MenuActivity;
+import com.example.administrator.multiplestatusviewtest.QRCodeActivity;
 import com.example.administrator.multiplestatusviewtest.R;
 
 import butterknife.ButterKnife;
@@ -32,7 +34,8 @@ public class DungeonFragment extends Fragment {
         return view;
     }
 
-    @OnClick({R.id.btn_leakCanary,R.id.btn_Menu,R.id.btn_AlarmService,R.id.btn_QRCode,R.id.btn_eventBus})
+    @OnClick({R.id.btn_leakCanary,R.id.btn_Menu,R.id.btn_AlarmService,
+            R.id.btn_QRCode,R.id.btn_eventBus,R.id.btn_getLatLng})
     void OnClick(View v){
         Intent intent;
         switch (v.getId()){
@@ -49,11 +52,15 @@ public class DungeonFragment extends Fragment {
                 startActivity(intent);
                 break;
             case R.id.btn_QRCode:
-                intent = new Intent(mContext, AlarmServiceActivity.class);
+                intent = new Intent(mContext, QRCodeActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_eventBus:
                 intent = new Intent(mContext, EventBusActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_getLatLng:
+                intent = new Intent(mContext, GetLatLngActivity.class);
                 startActivity(intent);
                 break;
         }
