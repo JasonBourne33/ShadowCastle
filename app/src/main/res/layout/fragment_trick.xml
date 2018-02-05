@@ -107,5 +107,11 @@
             android:layout_height="wrap_content"
             android:text="MaterialDesign"
             android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="openMap"
+            android:textAllCaps="false" />
     </LinearLayout>
 </FrameLayout>
