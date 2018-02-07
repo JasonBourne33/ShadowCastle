@@ -86,7 +86,9 @@
         <activity android:name=".GlideActivity" />
         <activity android:name=".PictureSelectorActivity" />
         <activity android:name=".GetLatLngActivity" />
-        <activity android:name=".OpenLocalMapActivity"></activity>
+        <activity android:name=".OpenLocalMapActivity" />
+        <activity android:name=".SetHeadViewActivity"
+            ></activity>
     </application>
 
 </manifest>

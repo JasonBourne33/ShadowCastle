@@ -24,7 +24,6 @@ import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.squareup.leakcanary.LeakCanary;
 
 import org.litepal.LitePal;
-import org.litepal.exceptions.GlobalException;
 
 import java.io.File;
 import java.util.Stack;
@@ -45,8 +44,8 @@ public class MyApplication extends Application{
         super.onCreate();
         context = getApplicationContext();
         initImageloader();
-        LitePal.initialize(this);
-        LeakCanary.install(this);
+        LitePal.initialize(this); //
+        LeakCanary.install(this); //leakCanary初始化，处理内存泄漏
     }
 
 
