@@ -99,4 +99,10 @@
     <dimen name="text_size_middle">16sp</dimen>
     <dimen name="text_size_normal">18sp</dimen>
     <dimen name="text_size_large">20sp</dimen>
+
+    <!--popwindow-->
+    <dimen name="list_corner">5dp</dimen>
+    <integer name="anim_up_duration">350</integer>
+    <integer name="anim_down_duration">350</integer>
+    <dimen name="edit_padding_top">0dp</dimen>
 </resources>
