@@ -49,7 +49,7 @@ public class MaterialActivity extends AppCompatActivity{
             new Fruit("Pineapple", R.drawable.pineapple), new Fruit("Strawberry", R.drawable.strawberry),
             new Fruit("Cherry", R.drawable.cherry), new Fruit("Mango", R.drawable.mango)};
 
-
+    //first MaterialActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
