@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.administrator.multiplestatusviewtest.BottomNavigationActivity;
 import com.example.administrator.multiplestatusviewtest.CheckBoxActivity;
-import com.example.administrator.multiplestatusviewtest.PictureSelectorActivity;
 import com.example.administrator.multiplestatusviewtest.R;
 import com.example.administrator.multiplestatusviewtest.RadioButtonActivity;
 import com.example.administrator.multiplestatusviewtest.StartActivityForResultActivity;
@@ -55,8 +54,6 @@ public class ControlFragment extends Fragment {
                 startActivity(intent);
                 break;
             case R.id.btn_pictureSelector:
-                intent = new Intent(mContext, PictureSelectorActivity.class);
-                startActivity(intent);
                 break;
         }
     }
