@@ -105,4 +105,6 @@
     <integer name="anim_up_duration">350</integer>
     <integer name="anim_down_duration">350</integer>
     <dimen name="edit_padding_top">0dp</dimen>
+
+    <dimen name="ll_width_login_dialog">240dp</dimen>
 </resources>

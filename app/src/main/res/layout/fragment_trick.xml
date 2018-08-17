@@ -24,6 +24,13 @@
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btn_Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FragmentAndViewPager"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btn_MultiStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

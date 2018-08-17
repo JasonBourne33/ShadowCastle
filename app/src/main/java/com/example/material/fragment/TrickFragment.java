@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.administrator.multiplestatusviewtest.AdvertisingActivity;
 import com.example.administrator.multiplestatusviewtest.BannerActivity;
+import com.example.administrator.multiplestatusviewtest.FragmentActivity;
 import com.example.administrator.multiplestatusviewtest.GesturePwdActivity;
 import com.example.administrator.multiplestatusviewtest.MaterialActivity;
 import com.example.administrator.multiplestatusviewtest.MultipleStatusActivity;
@@ -39,7 +40,7 @@ public class TrickFragment extends Fragment {
     @OnClick({R.id.btn_MultiStatus, R.id.btn_GesturePwd, R.id.btn_Volley,
             R.id.btn_advertising, R.id.btn_banner, R.id.btn_recycler,
             R.id.btn_pullRecycler, R.id.btn_persistentData, R.id.btn_Material,
-            R.id.btn_OkHttp,R.id.btn_openLocalMap})
+            R.id.btn_OkHttp,R.id.btn_openLocalMap,R.id.btn_Fragment})
     void OnClick(View v) {
         Intent intent;
         switch (v.getId()) {
@@ -85,6 +86,10 @@ public class TrickFragment extends Fragment {
                 break;
             case R.id.btn_openLocalMap:
                 intent = new Intent(mContext, OpenLocalMapActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_Fragment:
+                intent = new Intent(mContext, FragmentActivity.class);
                 startActivity(intent);
                 break;
         }
