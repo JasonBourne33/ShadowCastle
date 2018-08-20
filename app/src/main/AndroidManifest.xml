@@ -35,7 +35,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/NoActionAppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".MaterialMainActivity"
             android:launchMode="singleTask">
@@ -87,7 +87,10 @@
         <activity android:name=".GetLatLngActivity" />
         <activity android:name=".OpenLocalMapActivity" />
         <activity android:name=".SetHeadViewActivity" />
-        <activity android:name=".FragmentActivity"></activity>
+        <activity
+            android:name=".FragmentActivity"
+            android:theme="@style/dialogstyle" />
+        <activity android:name=".FloatingButtonActivity"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class FragmentActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.vp_mine_pay);
 
         listFragment = new ArrayList<>();
+        Log.e("e","getSupportFragmentManager()=== "+getSupportFragmentManager());
         adapter = new ViewPagerAdapter(getSupportFragmentManager(), listFragment);
         for (int i = 0; i < titles.length; i++) {
             View view = View.inflate(getBaseContext(), R.layout.item_tab_view, null);

@@ -12,33 +12,6 @@ import com.example.administrator.multiplestatusviewtest.R;
 
 public class SharedPreferencesUtil {
 	
-//	public static void localizationUserInfo(Context mContext, User user) {
-//		SharedPreferences preferences = mContext.getSharedPreferences(
-//				mContext.getString(R.string.my_app_name), 0);
-//		Editor editor = preferences.edit();
-//		editor.putString(mContext.getString(R.string.UserNeiMa), user.getUserNeiMa());
-//		editor.putString(mContext.getString(R.string.UserName), user.getUserName());
-//		editor.putString(mContext.getString(R.string.UserPicture), user.getUserPicture());
-//		editor.putString(mContext.getString(R.string.NickName), user.getNickName());
-//		editor.putInt(mContext.getString(R.string.Sex), user.getSex());
-////		editor.putString(mContext.getString(R.string.Birthday), user.getBirthday());
-//		editor.putString(mContext.getString(R.string.Address), user.getAddress());
-////		editor.putInt(mContext.getString(R.string.IsVip), user.getIsVip());
-////		editor.putInt(mContext.getString(R.string.Points), user.getPoints());
-////		editor.putInt(mContext.getString(R.string.UserType), user.getUserType());
-//		editor.putString(mContext.getString(R.string.Memo), user.getMemo());
-//		editor.putString(mContext.getString(R.string.Mobile), user.getMobile());
-//		editor.putString(mContext.getString(R.string.CountryCode), user.getCountryCode());
-//		editor.putInt(mContext.getString(R.string.ApproveStatus), user.getApproveStatus());
-//		editor.putInt(mContext.getString(R.string.WarnState), user.getWarnState());
-//		editor.putString(mContext.getString(R.string.VersionUpdate), user.getVersionUpdate());
-//		editor.putString(mContext.getString(R.string.VersionUpdateContent), user.getVersionUpdateContent());
-//		editor.putInt(mContext.getString(R.string.HaveSafeOrNot), user.getHaveSafeOrNot());
-//		editor.putInt(mContext.getString(R.string.IsFirstLogin),user.getIsFirstLogin());
-//		editor.putString(mContext.getString(R.string.LotteryPicture), user.getLotteryPicture());
-//		editor.putString("CouponActivityPicture", user.getCouponActivityPicture()==null?"":user.getCouponActivityPicture());
-//		editor.commit();
-//	}
 
 	public static void clearCouponActivityPicture(Context mContext){
 		SharedPreferences preferences = mContext.getSharedPreferences(
@@ -48,33 +21,6 @@ public class SharedPreferencesUtil {
 		editor.commit();
 	}
 	
-//	public static User getUserInfoFromShare(Context mContext){
-//		User user = new User();
-//		SharedPreferences preferences = mContext.getSharedPreferences(
-//				mContext.getString(R.string.my_app_name), 0);
-//		user.setUserNeiMa(preferences.getString(mContext.getString(R.string.UserNeiMa), "-1"));
-//		user.setUserName(preferences.getString(mContext.getString(R.string.UserName), ""));
-//		user.setUserPicture(preferences.getString(mContext.getString(R.string.UserPicture), ""));
-//		user.setNickName(preferences.getString(mContext.getString(R.string.NickName), ""));
-//		user.setSex(preferences.getInt(mContext.getString(R.string.Sex), 0));
-////		user.setBirthday(preferences.getString(mContext.getString(R.string.Birthday), ""));
-//		user.setAddress(preferences.getString(mContext.getString(R.string.Address), ""));
-////		user.setIsVip(preferences.getInt(mContext.getString(R.string.IsVip), 0));
-////		user.setUserType(preferences.getInt(mContext.getString(R.string.UserType),0));
-////		user.setPoints(preferences.getInt(mContext.getString(R.string.Points), 0));
-//		user.setMemo(preferences.getString(mContext.getString(R.string.Memo), ""));
-//		user.setMobile(preferences.getString(mContext.getString(R.string.Mobile), ""));
-//		user.setCountryCode(preferences.getString(mContext.getString(R.string.CountryCode), ""));
-//		user.setApproveStatus(preferences.getInt(mContext.getString(R.string.ApproveStatus), -1));
-//		user.setWarnState(preferences.getInt(mContext.getString(R.string.WarnState), 0));
-//		user.setVersionUpdate(preferences.getString(mContext.getString(R.string.VersionUpdate), "0"));
-//		user.setVersionUpdateContent(preferences.getString(mContext.getString(R.string.VersionUpdateContent), ""));
-//		user.setHaveSafeOrNot(preferences.getInt(mContext.getString(R.string.HaveSafeOrNot), 0));
-//		user.setIsFirstLogin(preferences.getInt(mContext.getString(R.string.IsFirstLogin), 0));
-//		user.setCouponActivityPicture(preferences.getString("CouponActivityPicture", ""));
-//		user.setLotteryPicture(preferences.getString("LotteryPicture", ""));
-//		return user;
-//	}
 
 	
 	public static SharedPreferences initSharedPreferences(Context mContext) {
