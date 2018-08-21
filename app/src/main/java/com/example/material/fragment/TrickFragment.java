@@ -2,13 +2,20 @@ package com.example.material.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 
+import com.chaos.dialog.DragFloatActionButton;
 import com.example.administrator.multiplestatusviewtest.AdvertisingActivity;
 import com.example.administrator.multiplestatusviewtest.BannerActivity;
 import com.example.administrator.multiplestatusviewtest.FloatingButtonActivity;
@@ -92,10 +99,32 @@ public class TrickFragment extends Fragment {
             case R.id.btn_Fragment:
                 intent = new Intent(mContext, FragmentActivity.class);
                 startActivity(intent);
+
+
                 break;
             case R.id.btn_floating_button:
-                intent = new Intent(mContext, FloatingButtonActivity.class);
-                startActivity(intent);
+//                intent = new Intent(mContext, FloatingButtonActivity.class);
+//                startActivity(intent);
+
+                //View view =LayoutInflater.from(getActivity()).inflate(R.layout.activity_floating_button,null);
+
+
+                WindowManager manager =  (WindowManager)getActivity().getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+//        LinearLayout.LayoutParams rootParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+                WindowManager.LayoutParams rootParams =  new WindowManager.LayoutParams();
+                rootParams.width = 200;
+                rootParams.height = 200;
+                rootParams.gravity = Gravity.TOP|Gravity.LEFT;
+                rootParams.format = PixelFormat.TRANSPARENT;
+                rootParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+                rootParams.flags = WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
+
+
+                DragFloatActionButton button = new DragFloatActionButton(this.getActivity(),manager,rootParams);
+                manager.addView(button,rootParams);
+
+                //manager.updateViewLayout(button,rootParams);
                 break;
         }
     }
