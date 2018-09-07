@@ -24,6 +24,7 @@ import butterknife.ButterKnife;
 
 public class PullLoadMoreRecyclerActivity extends AppCompatActivity implements PullLoadMoreRecyclerView.PullLoadMoreListener{
 
+    private static final String TAG = "tag";
     private PullRecyclerViewAdapter mPullRecyclerViewAdapter;
     private List<Fruit> fruitList = new ArrayList<Fruit>();
     private RecyclerView mRecyclerView;
@@ -99,6 +100,7 @@ public class PullLoadMoreRecyclerActivity extends AppCompatActivity implements P
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        Log.e(TAG, "run: fruitList=== "+fruitList );
                         mPullRecyclerViewAdapter.addAllData(fruitList);
                         mPullLoadMoreRecyclerView.setPullLoadMoreCompleted();
                     }
@@ -106,7 +108,6 @@ public class PullLoadMoreRecyclerActivity extends AppCompatActivity implements P
 
             }
         }, 1000);
-
     }
 
     @Override

@@ -37,7 +37,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         LinearLayoutManager layoutManagerH = new LinearLayoutManager(this);
         layoutManagerH.setOrientation(LinearLayoutManager.HORIZONTAL);
 
-        recyclerView.setLayoutManager(layoutManagerH);
+        recyclerView.setLayoutManager(layoutManagerV);
         FruitAdapter adapter = new FruitAdapter(fruitList);
         recyclerView.setAdapter(adapter);
     }

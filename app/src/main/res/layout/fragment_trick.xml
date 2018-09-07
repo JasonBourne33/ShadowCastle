@@ -17,10 +17,11 @@
             android:text="Welcome to my castle"
             android:textAllCaps="false" />
 
-        <TextView
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btn_floating_window"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MainPager Fragment"
+            android:text="DraggableFloatingWindow"
             android:textAllCaps="false" />
 
         <Button

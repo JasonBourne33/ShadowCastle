@@ -11,7 +11,6 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.chaos.dialog.DragFloatActionButton;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

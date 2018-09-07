@@ -15,10 +15,6 @@ import com.example.administrator.multiplestatusviewtest.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by WuXiaolong
- * on 2015/7/2.
- */
 public class PullRecyclerViewAdapter extends RecyclerView.Adapter<PullRecyclerViewAdapter.ViewHolder> {
 
     private Context mContext;

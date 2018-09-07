@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.chaos.dialog.DragFloatActionButton;
+import com.chaos.dialog.DragFloatActionWindow;
 import com.example.administrator.multiplestatusviewtest.AdvertisingActivity;
 import com.example.administrator.multiplestatusviewtest.BannerActivity;
 import com.example.administrator.multiplestatusviewtest.FloatingButtonActivity;
@@ -48,7 +49,8 @@ public class TrickFragment extends Fragment {
     @OnClick({R.id.btn_MultiStatus, R.id.btn_GesturePwd, R.id.btn_Volley,
             R.id.btn_advertising, R.id.btn_banner, R.id.btn_recycler,
             R.id.btn_pullRecycler, R.id.btn_persistentData, R.id.btn_Material,
-            R.id.btn_OkHttp,R.id.btn_openLocalMap,R.id.btn_Fragment,R.id.btn_floating_button})
+            R.id.btn_OkHttp, R.id.btn_openLocalMap, R.id.btn_Fragment, R.id.btn_floating_button,
+            R.id.btn_floating_window})
     void OnClick(View v) {
         Intent intent;
         switch (v.getId()) {
@@ -99,30 +101,39 @@ public class TrickFragment extends Fragment {
             case R.id.btn_Fragment:
                 intent = new Intent(mContext, FragmentActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_floating_button:
-//                intent = new Intent(mContext, FloatingButtonActivity.class);
-//                startActivity(intent);
+                intent = new Intent(mContext, FloatingButtonActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_floating_window:
+//                WindowManager manager = (WindowManager) getActivity().getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+//                final WindowManager.LayoutParams rootParams = new WindowManager.LayoutParams();
+//                rootParams.width = 200;
+//                rootParams.height = 200;
+//                rootParams.gravity = Gravity.TOP | Gravity.LEFT;
+//                rootParams.format = PixelFormat.TRANSPARENT;
+//                rootParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+//                rootParams.flags = WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
+//                DragFloatActionButton button = new DragFloatActionButton(this.getActivity(), new DragFloatActionButton.OnDragMoveListener() {
+//                    @Override
+//                    public void onDrag(int x, int y) {
+//                        rootParams.x = x;
+//                        rootParams.y = y;
+//                    }
+//                });
+//                manager.addView(button, rootParams);
 
-                //View view =LayoutInflater.from(getActivity()).inflate(R.layout.activity_floating_button,null);
-
-
-                WindowManager manager =  (WindowManager)getActivity().getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
-//        LinearLayout.LayoutParams rootParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-
-                WindowManager.LayoutParams rootParams =  new WindowManager.LayoutParams();
-                rootParams.width = 200;
-                rootParams.height = 200;
-                rootParams.gravity = Gravity.TOP|Gravity.LEFT;
-                rootParams.format = PixelFormat.TRANSPARENT;
-                rootParams.type = WindowManager.LayoutParams.TYPE_PHONE;
-                rootParams.flags = WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
-
-
-                DragFloatActionButton button = new DragFloatActionButton(this.getActivity(),manager,rootParams);
-                manager.addView(button,rootParams);
+//                WindowManager manager = (WindowManager) getActivity().getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+//                WindowManager.LayoutParams rootParams = new WindowManager.LayoutParams();
+//                rootParams.width = 200;
+//                rootParams.height = 200;
+//                rootParams.gravity = Gravity.TOP | Gravity.LEFT;
+//                rootParams.format = PixelFormat.TRANSPARENT;
+//                rootParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+//                rootParams.flags = WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
+//                DragFloatActionWindow button = new DragFloatActionWindow(this.getActivity(), manager, rootParams);
+//                manager.addView(button, rootParams);
 
                 //manager.updateViewLayout(button,rootParams);
                 break;
